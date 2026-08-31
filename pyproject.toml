@@ -1,0 +1,23 @@
+[project]
+name = "exist"
+version = "0.1.0"
+description = "A multiclass classifier for celestial objects built with scikit-learn."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "Luís Antonio Manfredi Sodré", email = "luismanfredi920@gmail.com"}
+]
+dependencies = [
+    "jupyter-core>=5.9.1",
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.2",
+    "pandas>=3.0.5",
+    "seaborn>=0.13.2",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.1",
+    "pre-commit>=4.6.2",
+    "ruff>=0.16.5",
+]

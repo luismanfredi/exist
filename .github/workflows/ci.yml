@@ -1,0 +1,18 @@
+# .github/workflows/ci.yml
+name: CI
+on: [push, pull_request]
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+      - run: uv sync --all-extras
+      - run: uv run ruff check .
+      - name: Run mypy
+        run: |
+          if find src -name "*.py" -o -name "*.pyi" | grep -q .; then
+            uv run mypy src/
+          else
+            echo "No Python files found. Skipping mypy."
+          fi
