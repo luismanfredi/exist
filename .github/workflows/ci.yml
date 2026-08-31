@@ -1,0 +1,12 @@
+# .github/workflows/ci.yml
+name: CI
+on: [push, pull_request]
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+      - run: uv sync --all-extras
+      - run: uv run ruff check .
+      - run: uv run mypy src/
