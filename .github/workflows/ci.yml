@@ -9,4 +9,10 @@ jobs:
       - uses: astral-sh/setup-uv@v3
       - run: uv sync --all-extras
       - run: uv run ruff check .
-      - run: uv run mypy src/
+      - name: Run mypy
+        run: |
+          if find src -name "*.py" -o -name "*.pyi" | grep -q .; then
+            uv run mypy src/
+          else
+            echo "No Python files found. Skipping mypy."
+          fi
