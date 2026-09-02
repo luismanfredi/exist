@@ -2,3 +2,6 @@
 dist/
 exist.egg-info/
 data/raw
+.mypy_cache/
+.ipynb_checkpoints/
+__pycache__/
