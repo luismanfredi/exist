@@ -5,7 +5,7 @@ import seaborn as sns
 
 def plot_histogram(
     data: pd.DataFrame,
-    x: str,
+    x: str | pd.Series,
     y: str | None = None,
     title: str | None = None,
     xlabel: str | None = None,
@@ -51,7 +51,8 @@ def plot_histogram(
 
     plt.title(title or f"{x.capitalize} distribution")
 
-    plt.xlabel(xlabel or x.capitalize())
+    if type(x) is str:
+        plt.xlabel(xlabel or x.capitalize())
 
     plt.ylabel(ylabel)
 
