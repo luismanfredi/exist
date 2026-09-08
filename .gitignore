@@ -1,7 +1,10 @@
 .venv/
 dist/
 exist.egg-info/
-data/raw
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
 .mypy_cache/
 .ipynb_checkpoints/
 __pycache__/
