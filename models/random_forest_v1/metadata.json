@@ -1,0 +1,11 @@
+{
+  "hyperparameters": {
+    "n_estimators": 300,
+    "max_depth": 20,
+    "min_samples_leaf": 1,
+    "max_features": "log2"
+  },
+  "test_f1_macro": 0.9767207545506839,
+  "sklearn_version": "1.9.0",
+  "trained_at": "2026-09-12T19:33:09.552201+00:00"
+}

@@ -8,6 +8,7 @@ authors = [
     { name = "Luís Antonio Manfredi Sodré", email = "luismanfredi920@gmail.com"}
 ]
 dependencies = [
+    "joblib>=1.6.0",
     "jupyter-core>=5.9.1",
     "matplotlib>=3.11.1",
     "notebook>=7.6.2",
@@ -33,3 +34,10 @@ dev = [
 [tool.mypy]
 mypy_path = "src"
 explicit_package_bases = true
+
+[[tool.mypy.overrides]]
+module = [
+    "sklearn.*",
+    "joblib.*"
+]
+ignore_missing_imports = true
