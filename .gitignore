@@ -9,3 +9,5 @@ data/processed/*
 .ipynb_checkpoints/
 __pycache__/
 .ruff_cache/
+models/
+!models/random_forest_v1/metadata.json
