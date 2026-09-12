@@ -1,7 +1,7 @@
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 
-from src.exist.config import RF_PARAMS
+from exist.config import RF_PARAMS
 
 
 def build_model() -> Pipeline:

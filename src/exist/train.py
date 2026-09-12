@@ -9,8 +9,8 @@ from pyprojroot import here
 from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
 
-from src.exist.config import MODEL_DIR, RF_PARAMS, output_data_dir
-from src.exist.model import build_model
+from exist.config import MODEL_DIR, RF_PARAMS, output_data_dir
+from exist.model import build_model
 
 sys.path.append(str(here()))
 

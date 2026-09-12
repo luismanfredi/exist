@@ -5,7 +5,7 @@ import numpy as np
 from numpy.typing import NDArray
 from sklearn.pipeline import Pipeline
 
-from src.exist.config import MODEL_DIR
+from exist.config import MODEL_DIR
 
 
 def load_model() -> Pipeline:
