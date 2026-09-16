@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/python-3.12-blue)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 
-A multiclass classifier for astronomicaç objects (**galaxy**, **star**, **quasar**) built with scikit-learn.
+A multiclass classifier for astronomical objects (**galaxy**, **star**, **quasar**) built with scikit-learn.
 
 ## Dataset
 
