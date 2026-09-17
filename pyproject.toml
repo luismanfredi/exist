@@ -17,6 +17,7 @@ dependencies = [
     "pandas-stubs>=3.0.5.260730",
     "pyarrow>=25.0.1",
     "pyprojroot>=0.3.0",
+    "pytest>=9.1.1",
     "scikit-learn>=1.9.0",
     "scipy>=1.18.1",
     "seaborn>=0.13.2",
@@ -32,7 +33,7 @@ dev = [
 ]
 
 [tool.mypy]
-mypy_path = "src"
+mypy_path = "src:tests"
 explicit_package_bases = true
 
 [[tool.mypy.overrides]]
