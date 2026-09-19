@@ -10,7 +10,7 @@ from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
 
 from exist.config import MODEL_DIR, RF_PARAMS, output_data_dir
-from exist.model import build_model
+from exist.model.model import build_model
 
 sys.path.append(str(here()))
 
