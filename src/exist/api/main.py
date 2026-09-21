@@ -10,7 +10,7 @@ from exist.utils import complete_table
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app.state.model = joblib.load(MODEL_DIR / "model.joblib")
+    app.state.model = joblib.load(MODEL_DIR / "random_forest_v1" / "model.joblib")
     yield
 
 
