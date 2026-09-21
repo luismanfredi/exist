@@ -125,7 +125,7 @@ def complete_table(features: ObjectFeatures) -> pd.DataFrame:
     Returns:
         pd.DataFrame
     """
-    values = [list(features.model_dump())]
+    values = pd.DataFrame([features.model_dump()])
 
     df = pd.DataFrame(values)
 
