@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
+from exist.api.schemas import ObjectFeatures
+
 
 def plot_histogram(
     data: pd.DataFrame,
@@ -112,3 +114,24 @@ def plot_box(
         plt.grid(True, linestyle="--", alpha=0.6)
 
     plt.show()
+
+
+def complete_table(features: ObjectFeatures) -> pd.DataFrame:
+    """Transform the feature in a pandas DataFrame and add the differece between adjacent photometric columns
+
+    Args:
+        features (ObjectFeatures): The features passed by the user in the API
+
+    Returns:
+        pd.DataFrame
+    """
+    values = [list(features.model_dump())]
+
+    df = pd.DataFrame(values)
+
+    df["u_g"] = df["u"] - df["g"]
+    df["g_r"] = df["g"] - df["r"]
+    df["r_i"] = df["r"] - df["i"]
+    df["i_z"] = df["i"] - df["z"]
+
+    return df
